@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>格式分析器</title>
+	<style type="text/css">
+	em{
+		font-style: normal;
+		font-size: 30px;
+		font-family: arial;
+		display: block;
+	}
+	textarea{
+		display: block;
+		width: 480px;
+		height: 560px;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+	#form{
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -250px;
+		padding: 10px;
+		width: 500px;
+		height: 650px;
+		border: 1px solid black;
+	}
+	input{
+		display: block;
+		height: 30px;
+		width: 150px;
+		margin-left: 335px;
+	}
+	</style>
+</head>
+<body>
+<div id="form">
+	<form action="result.php" method="post">
+		<em>在下面的文本框里粘贴你的作业</em>
+		<textarea name="text" wrap="soft" cols="28"></textarea>
+		<input type="submit">
+	</form>
+</div>
+</body>
+</html>
