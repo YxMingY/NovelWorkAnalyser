@@ -123,7 +123,7 @@ function analyse(string $text):void
     }
   }
   if(!empty($black_wrongs)) {
-    echo "&nbsp;&nbsp;下行的开头空格数有问题，检查一下！"."<br />";
+    echo "&nbsp;&nbsp;以下行的开头空格数有问题，检查一下！"."<br />";
     foreach ($black_wrongs as $black_wrong) {
       echo "&nbsp;&nbsp;&nbsp;&nbsp;第" . $black_wrong[0] . "行的开头居然空了".$black_wrong[1]." 格？？ (" . (strlen($l = trim($lines[$black_wrong[0]-1])) < 21 ? $l : substr($l, 0, 21)) . "...)"."<br />";
     }
