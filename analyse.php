@@ -129,12 +129,12 @@ function analyse(string $text):void
     }
   }
   if(!empty($inter_wrongs)) {
-    echo "&nbsp;&nbsp;以下行间的空行数有问题，检查一下！(开头个数错误的行，视作普通段落)"."<br />";
+    echo "&nbsp;&nbsp;以下行间的空行数有问题，检查一下！(开头空格个数错误的行，视作普通段落)"."<br />";
     foreach ($inter_wrongs as $inter_wrong) {
       echo "&nbsp;&nbsp;&nbsp;&nbsp;第" . $inter_wrong[1] . "行(".(strlen($l = trim($lines[$inter_wrong[0]-1])) < 21 ? $l : substr($l, 0, 21)) ."...)和第".$inter_wrong[0]."行(".(strlen($l = trim($lines[$inter_wrong[1]-1])) < 21 ? $l : substr($l, 0, 21)) ."...)间应该空".$inter_wrong[2]."行,你空了".$inter_wrong[3]."行。"."<br />";
     }
   }
-  if(empty($letter_wrongs)&&empty($symbol_wrongs)&&empty($inter_wrongs)&&empty($inter_wrongs)) {
+  if(empty($letter_wrongs)&&empty($symbol_wrongs)&&empty($black_wrongs)&&empty($inter_wrongs)&&empty($inter_wrongs)) {
     echo "&nbsp;&nbsp;emm,我没发现你的格式错误，你好棒哦！"."<br />";
   }
   //print_r($lines_info);
